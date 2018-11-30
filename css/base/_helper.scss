@@ -1,0 +1,27 @@
+@for $i from 1 through 20 {
+  $num: $i * 8;
+  $d: (
+    top,
+    right,
+    bottom,
+    left
+  );
+
+  .margin--#{$num} {
+    margin: #{$num}px;
+  }
+  @each $direct in $d {
+    .margin-#{$direct}--#{$num} {
+      margin-#{$direct}: #{$num}px;
+    }
+  }
+
+  .padding--#{$num} {
+    padding: #{$num}px;
+  }
+  @each $direct in $d {
+    .padding-#{$direct}--#{$num} {
+      padding-#{$direct}: #{$num}px;
+    }
+  }
+}
