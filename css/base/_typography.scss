@@ -1,0 +1,27 @@
+.title {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.body {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+// font color css // compile .font-black
+@each $get-color, $value in $Color {
+  .font-#{$get-color} {
+    color: $value;
+  }
+}
+// font Sub color css // compile .font-black-sub
+@each $get-color, $value in $ColorSub {
+  .font-#{$get-color} {
+    color: $value;
+  }
+}

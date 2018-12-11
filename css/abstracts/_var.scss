@@ -1,9 +1,60 @@
-// Colour Palette
+// !compileOnSave
+// compileOnSave: false
+//
+// Variables
+//
+// Website Color
 // Black and white
-$Dark: rgba(0,0,0,.87);
-$DarkSub: transparentize($Dark, 0.33);
-$Light: rgba(255,255,255,1);
-$LightSub: transparentize($Light, 0.33);
+$Black:           rgba(0, 0 ,0, 0.87);
+$BlackSub:        transparentize($Black, 0.33);
+$BlackBorderDark: transparentize($Black, 0.57);
+$BlackBorder:     transparentize($Black, 0.72);
 
-// Primary Colour
-$Primary: rgba(3,12,225,1);
+$White:           rgba(255, 255, 255, 0.87);
+$WhiteSub:        transparentize($White, 0.33);
+$WhiteBorder:     transparentize($White, 0.72);
+
+// Primary Color
+$Primary:         rgba(112, 92, 255, 1); // Primary
+$PrimarySub:      transparentize($Primary, 0.46);
+$PrimaryLighter:  lighten($Primary, 14%);
+$PrimaryLight:    lighten($Primary, 7%);
+$PrimaryDark:     darken($Primary, 7%);
+$PrimaryDarker:   darken($Primary, 14%);
+
+// Secondary Color
+$Second:          rgba(224, 72, 72, 1);
+$SecondSub:       transparentize($Second, 0.46);
+$SecondLighter:   lighten($Second, 14%) ;
+$SecondLight:     lighten($Second, 7%) ;
+$SecondDark:      darken($Second, 7%) ;
+$SecondDarker:    darken($Second, 14%) ;
+// Accent Color
+$Accent:          rgba(252, 194, 0, 1);
+$AccentSub:       transparentize($Accent, 0.46);
+$AccentLighter:   lighten($Accent, 14%) ;
+$AccentLight:     lighten($Accent, 7%) ;
+$AccentDark:      darken($Accent, 7%) ;
+$AccentDarker:    darken($Accent, 14%) ;
+
+// Get color map
+$Color: (
+  black: $Black,
+  white: $White,
+  primary: $Primary,
+  second: $Second,
+  accent: $Accent
+);
+
+$ColorSub: (
+  black-sub: $BlackSub,
+  white-sub: $WhiteSub,
+  primary-sub: $PrimarySub,
+  second-sub: $SecondSub,
+  accent-sub: $AccentSub
+);
+
+// max layout size
+$Gutter: 16px !default;
+$ColumnWidth: 84px;
+$Contain: $ColumnWidth * 12 + $Gutter * 24;
