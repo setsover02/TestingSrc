@@ -3,58 +3,36 @@
 //
 // Variables
 //
-// Website Color
-// Black and white
-$Black:           rgba(0, 0 ,0, 0.87);
-$BlackSub:        transparentize($Black, 0.33);
-$BlackBorderDark: transparentize($Black, 0.57);
-$BlackBorder:     transparentize($Black, 0.72);
-
-$White:           rgba(255, 255, 255, 0.87);
-$WhiteSub:        transparentize($White, 0.33);
-$WhiteBorder:     transparentize($White, 0.72);
-
-// Primary Color
-$Primary:         rgba(112, 92, 255, 1); // Primary
-$PrimarySub:      transparentize($Primary, 0.46);
-$PrimaryLighter:  lighten($Primary, 14%);
-$PrimaryLight:    lighten($Primary, 7%);
-$PrimaryDark:     darken($Primary, 7%);
-$PrimaryDarker:   darken($Primary, 14%);
-
-// Secondary Color
-$Second:          rgba(224, 72, 72, 1);
-$SecondSub:       transparentize($Second, 0.46);
-$SecondLighter:   lighten($Second, 14%) ;
-$SecondLight:     lighten($Second, 7%) ;
-$SecondDark:      darken($Second, 7%) ;
-$SecondDarker:    darken($Second, 14%) ;
-// Accent Color
-$Accent:          rgba(252, 194, 0, 1);
-$AccentSub:       transparentize($Accent, 0.46);
-$AccentLighter:   lighten($Accent, 14%) ;
-$AccentLight:     lighten($Accent, 7%) ;
-$AccentDark:      darken($Accent, 7%) ;
-$AccentDarker:    darken($Accent, 14%) ;
-
-// Get color map
-$Color: (
-  black: $Black,
-  white: $White,
-  primary: $Primary,
-  second: $Second,
-  accent: $Accent
+// Colour Maps
+$Colour: (
+  Black:    hsla(228, 29, 14, 1),
+  White:    hsla(201, 69, 90, 1),
+  Sunset:   hsla(231, 28, 18, 1),
+  Primary:  hsla(218, 90, 72, 1),
+  Second:   hsla(198, 74, 71, 1),
+  Accent:   hsla(35, 86, 80, 1),
+  Teal:     hsla(181, 91, 45, 1),
+  Mint:     hsla(165, 71, 70, 1),
+  Lime:     hsla(94, 80, 80, 1),
+  Floral:   hsla(242, 83, 79, 1),
+  Thulian:  hsla(307, 63, 72, 1),
+  Rose:     hsla(339, 78, 71, 1),
+  Orange:   hsla(15, 68, 65, 1)
 );
 
-$ColorSub: (
-  black-sub: $BlackSub,
-  white-sub: $WhiteSub,
-  primary-sub: $PrimarySub,
-  second-sub: $SecondSub,
-  accent-sub: $AccentSub
-);
+// $get-colour (
+//  $Value in $Colour{
+//     #{$Value}-100: $Value,
+//     #{$Value}-80: transparentize($Value, .2),
+//     #{$Value}-54: transparentize($Value, .46),
+//     #{$Value}-30: transparentize($Value, .7)
+//   }
+// );
 
-// max layout size
+// Maximum layout size
 $Gutter: 16px !default;
 $ColumnWidth: 84px;
 $Contain: $ColumnWidth * 12 + $Gutter * 24;
+@function columns ($number: 1, $Col: 12) {
+  @return $ColumnWidth * ($number + $Gutter);
+}
