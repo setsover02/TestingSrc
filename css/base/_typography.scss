@@ -14,14 +14,14 @@
 }
 
 // font color css // compile .font-black
-@each $get-color, $value in $Color {
+@each $get-color, $value in $Colour {
   .font-#{$get-color} {
     color: $value;
   }
 }
 // font Sub color css // compile .font-black-sub
-@each $get-color, $value in $ColorSub {
-  .font-#{$get-color} {
-    color: $value;
-  }
-}
+// @each $get-color, $value in $ColorSub {
+//   .font-#{$get-color} {
+//     color: $value;
+//   }
+// }
