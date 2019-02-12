@@ -1,0 +1,45 @@
+// Layout variable
+$Gutter: 16px;
+$ColumnWidth: 92px; // Centered container element
+
+.container {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: ($Gutter + $ColumnWidth) * 12; // 12column grid system
+  margin: 0 auto;
+  padding-left: floor($Gutter/2);
+  padding-right: ceil($Gutter/2);
+  @include clearfix;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: ceil(-$Gutter/2);
+  margin-right: floor(-$Gutter/2);
+  @include clearfix;
+  background: colour(Teal);
+}
+
+.col {
+  position: relative;
+  height: 200px;
+  flex: 1;
+  padding-left: ceil($Gutter/2);
+  padding-right: floor($Gutter/2);
+}
+
+.col-12 {
+  position: relative;
+  height: 200px;
+  flex: 0 0 100%;
+  padding-left: ceil($Gutter/2);
+  padding-right: floor($Gutter/2);
+}
+
+.content {
+  background: colour(Floral);
+  width: 100%;
+  height: 100%;
+}

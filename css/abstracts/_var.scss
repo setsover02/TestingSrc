@@ -4,7 +4,7 @@
 // Variables
 //
 // Colour Maps
-$Colour: (
+$MimaoColour: (
   Black:    hsla(228, 29, 14, 1),
   White:    hsla(201, 69, 90, 1),
   Sunset:   hsla(231, 28, 18, 1),
@@ -20,14 +20,14 @@ $Colour: (
   Orange:   hsla(15, 68, 65, 1)
 );
 
-// $get-colour (
-//  $Value in $Colour{
-//     #{$Value}-100: $Value,
-//     #{$Value}-80: transparentize($Value, .2),
-//     #{$Value}-54: transparentize($Value, .46),
-//     #{$Value}-30: transparentize($Value, .7)
-//   }
-// );
+$MimaoOpacity: (
+  100: 1,
+  80: .8,
+  54: .54,
+  30: .3,
+  10: .1
+);
+
 
 // Maximum layout size
 $Gutter: 16px !default;
