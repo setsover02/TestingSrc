@@ -1,18 +1,88 @@
-.title {
-  font-size: 24px;
-  font-weight: 200;
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: $font-weight-light;
+  color: map-get($colour, white);
+}
+
+.heading1,
+h1 {
+  font-size: 3rem;
+  font-weight: $font-weight-light;
+}
+
+.heading2,
+h2 {
+  font-size: 2.25rem;
+  font-weight: $font-weight-regular;
+}
+
+.heading3,
+h3 {
+  font-size: 1.5rem;
+  font-weight: $font-weight-semibold;
 }
 
 .subtitle {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: $font-weight-regular;
+
+  & b,
+  & strong,
+  &.bold {
+    font-weight: $font-weight-bold;
+  }
 }
 
-.body {
-  font-size: 14px;
-  font-weight: 400;
+.body1 {
+  font-size: 1rem;
+  font-weight: $font-weight-light;
+  line-height: 1.5;
+
+  & b,
+  & strong,
+  &.bold {
+    font-weight: $font-weight-semibold;
+  }
 }
 
+.body2 {
+  font-size: 0.875rem;
+  font-weight: $font-weight-regular;
+  line-height: 1.5;
+
+  & b,
+  & strong,
+  &.bold {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.link {
+  border-bottom: 1px solid;
+  border-color: map-get($colour, white);
+  font-size: 0.875rem;
+  font-weight: $font-weight-semibold;
+}
+
+.btn,
+.button {
+  font-size: 0.875rem;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+}
+
+.caption {
+  font-size: 0.75rem;
+  font-weight: $font-weight-regular;
+  line-height: 1.5;
+}
+
+.overline {
+  font-size: 0.625rem;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+}
 // font color css // compile .font-black
 @each $get-colour, $value in $colour {
   .font-#{$get-colour} {

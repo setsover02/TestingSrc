@@ -5,6 +5,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 // clearfix
 @mixin clearfix() {
   &:after,
@@ -18,13 +19,21 @@
   }
 }
 
-@mixin bg-gradient ($range, $baseColor, $sideColor) {
+@mixin linear-gradient ($range, $baseColor, $sideColor) {
   background: $baseColor !important;
   background: -webkit-linear-gradient($range, $baseColor, $sideColor) !important;
   background: -moz-linear-gradient($range, $baseColor, $sideColor) !important;
   background: -ms-linear-gradient($range, $baseColor, $sideColor) !important;
   background: -o-linear-gradient($range, $baseColor, $sideColor) !important;
   background: linear-gradient($range, $baseColor, $sideColor) !important;
+}
+@mixin radial-gradient ($range, $baseColor, $sideColor) {
+  background: $baseColor !important;
+  background: -webkit-radial-gradient($range, $baseColor, $sideColor) !important;
+  background: -moz-radial-gradient($range, $baseColor, $sideColor) !important;
+  background: -ms-radial-gradient($range, $baseColor, $sideColor) !important;
+  background: -o-radial-gradient($range, $baseColor, $sideColor) !important;
+  background: radial-gradient($range, $baseColor, $sideColor) !important;
 }
 // Vendor prefixes
 // - Animations

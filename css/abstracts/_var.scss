@@ -1,20 +1,26 @@
 // Variables
 //
 // Colour Maps
+$theme-colour:(
+  darken:  hsla(235, 39, 20, 1),
+  dark:    hsla(235, 37, 22, 1),
+  normal:  hsla(236, 36, 24, 1),
+  light:   hsla(238, 34, 28, 1),
+  lighten: hsla(234, 31, 33, 1)
+);
+
 $colour: (
-  black:    hsla(228, 29, 14, 1),
   white:    hsla(201, 69, 90, 1),
-  sunset:   hsla(231, 28, 18, 1),
   primary:  hsla(218, 90, 72, 1),
   second:   hsla(198, 74, 71, 1),
-  accent:   hsla(35, 86, 80, 1),
-  teal:     hsla(181, 91, 45, 1),
+  accent:   hsla(181, 91, 45, 1),
   mint:     hsla(165, 71, 70, 1),
   lime:     hsla(94, 80, 80, 1),
-  floral:   hsla(242, 83, 79, 1),
-  thulian:  hsla(307, 63, 72, 1),
+  floral:   hsla(274, 92, 62, 1),
+  thulian:  hsla(307, 70, 53, 1),
   rose:     hsla(339, 78, 71, 1),
-  orange:   hsla(15, 68, 65, 1)
+  orange:   hsla(15, 68, 65, 1),
+  yellow:   hsla(35, 86, 80, 1)
 );
 
 $colour-opacity: (
@@ -24,6 +30,12 @@ $colour-opacity: (
   30: .3,
   10: .1
 );
+
+// Font Weight
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 800;
 
 // Grid System
 $grid-columns: 12; // ~ 24 column grid

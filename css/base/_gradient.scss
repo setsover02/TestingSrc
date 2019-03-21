@@ -1,0 +1,52 @@
+// make gradient
+// theme linear gradient
+@mixin linear-dark-darken {
+  @include linear-gradient (135deg, map-get($theme-colour, dark), map-get($theme-colour, darken));
+}
+@mixin linear-normal-dark {
+  @include linear-gradient (135deg, map-get($theme-colour, normal), map-get($theme-colour, dark));
+}
+@mixin linear-light-normal {
+  @include linear-gradient (135deg, map-get($theme-colour, light), map-get($theme-colour, normal));
+}
+@mixin linear-lighten-light {
+  @include linear-gradient (135deg, map-get($theme-colour, lighten), map-get($theme-colour, light));
+}
+// theme radial gradient
+@mixin radial-dark-darken {
+  @include radial-gradient (circle at 50% -20%, map-get($theme-colour, dark), map-get($theme-colour, darken));
+}
+@mixin radial-normal-dark {
+  @include radial-gradient (circle at 50% -20%, map-get($theme-colour, normal), map-get($theme-colour, dark));
+}
+@mixin radial-light-normal {
+  @include radial-gradient (circle at 50% -20%, map-get($theme-colour, light), map-get($theme-colour, normal));
+}
+@mixin radial-lighten-light {
+  @include radial-gradient (circle at 50% -20%, map-get($theme-colour, lighten), map-get($theme-colour, light));
+}
+// colour linear-gradient
+@mixin linear-primary-second {
+  @include linear-gradient (135deg, map-get($colour, primary), map-get($colour, second));
+}
+@mixin linear-primary-accent {
+  @include linear-gradient (135deg, map-get($colour, primary), map-get($colour, accent));
+}
+@mixin linear-accent-mint {
+  @include linear-gradient (135deg, map-get($colour, accent), map-get($colour, mint));
+}
+@mixin linear-mint-lime {
+  @include linear-gradient (135deg, map-get($colour, mint), map-get($colour, lime));
+}
+@mixin linear-floral-thulian {
+  @include linear-gradient (135deg, map-get($colour, floral), map-get($colour, thulian));
+}
+@mixin linear-thulian-rose {
+  @include linear-gradient (135deg, map-get($colour, thulian), map-get($colour, rose));
+}
+@mixin linear-rose-orange {
+  @include linear-gradient (135deg, map-get($colour, rose), map-get($colour, orange));
+}
+@mixin linear-orange-yellow {
+  @include linear-gradient (135deg, map-get($colour, orange), map-get($colour, yellow));
+}

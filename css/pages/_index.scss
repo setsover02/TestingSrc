@@ -1,19 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
-
-:root {
-  --Hsl: 140;
-}
-
-* {
-  margin:  0;
-  padding: 0;
-  font-family: 'Major Mono Display', monospace;
-  box-sizing: border-box;
-}
-
-
 body {
-  background: colour(Black);
+  @include radial-dark-darken;
   text-align: center;
   display: flex;
   flex-direction: column;
