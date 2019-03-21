@@ -2,7 +2,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: $font-weight-light;
-  color: map-get($colour, white);
+  color: map-get($color, white);
 }
 
 .heading1,
@@ -60,7 +60,7 @@ h3 {
 
 .link {
   border-bottom: 1px solid;
-  border-color: map-get($colour, white);
+  border-color: map-get($color, white);
   font-size: 0.875rem;
   font-weight: $font-weight-semibold;
 }
@@ -84,8 +84,8 @@ h3 {
   text-transform: uppercase;
 }
 // font color css // compile .font-black
-@each $get-colour, $value in $colour {
-  .font-#{$get-colour} {
+@each $get-color, $value in $color {
+  .font-#{$get-color} {
     color: $value;
   }
 }

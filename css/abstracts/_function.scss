@@ -1,8 +1,8 @@
-// Get colour map
-@function colour($key) {
-  @if map-has-key($colour, $key) {
-    @return map-get($colour, $key);
+// Get color map
+@function color($key) {
+  @if map-has-key($color, $key) {
+    @return map-get($color, $key);
   }
-  @warn "Unknown `#{$key}` in $colour.";
+  @warn "Unknown `#{$key}` in $color.";
   @return null;
 }

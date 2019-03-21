@@ -5,7 +5,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 // clearfix
 @mixin clearfix() {
   &:after,
@@ -18,22 +17,21 @@
     clear: both;
   }
 }
-
 @mixin linear-gradient ($range, $baseColor, $sideColor) {
-  background: $baseColor !important;
-  background: -webkit-linear-gradient($range, $baseColor, $sideColor) !important;
-  background: -moz-linear-gradient($range, $baseColor, $sideColor) !important;
-  background: -ms-linear-gradient($range, $baseColor, $sideColor) !important;
-  background: -o-linear-gradient($range, $baseColor, $sideColor) !important;
-  background: linear-gradient($range, $baseColor, $sideColor) !important;
+  background: $baseColor;
+  background: -webkit-linear-gradient($range, $baseColor, $sideColor);
+  background: -moz-linear-gradient($range, $baseColor, $sideColor);
+  background: -ms-linear-gradient($range, $baseColor, $sideColor);
+  background: -o-linear-gradient($range, $baseColor, $sideColor);
+  background: linear-gradient($range, $baseColor, $sideColor);
 }
 @mixin radial-gradient ($range, $baseColor, $sideColor) {
-  background: $baseColor !important;
-  background: -webkit-radial-gradient($range, $baseColor, $sideColor) !important;
-  background: -moz-radial-gradient($range, $baseColor, $sideColor) !important;
-  background: -ms-radial-gradient($range, $baseColor, $sideColor) !important;
-  background: -o-radial-gradient($range, $baseColor, $sideColor) !important;
-  background: radial-gradient($range, $baseColor, $sideColor) !important;
+  background: $baseColor;
+  background: -webkit-radial-gradient($range, $baseColor, $sideColor);
+  background: -moz-radial-gradient($range, $baseColor, $sideColor);
+  background: -ms-radial-gradient($range, $baseColor, $sideColor);
+  background: -o-radial-gradient($range, $baseColor, $sideColor);
+  background: radial-gradient($range, $baseColor, $sideColor);
 }
 // Vendor prefixes
 // - Animations
@@ -132,7 +130,6 @@
     color: $color;
   }
   // Internet Explorer 10+
-
   &::-webkit-input-placeholder {
     color: $color;
   }
