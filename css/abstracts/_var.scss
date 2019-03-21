@@ -1,26 +1,23 @@
-// !compileOnSave
-// compileOnSave: false
-//
 // Variables
 //
 // Colour Maps
-$MimaoColour: (
-  Black:    hsla(228, 29, 14, 1),
-  White:    hsla(201, 69, 90, 1),
-  Sunset:   hsla(231, 28, 18, 1),
-  Primary:  hsla(218, 90, 72, 1),
-  Second:   hsla(198, 74, 71, 1),
-  Accent:   hsla(35, 86, 80, 1),
-  Teal:     hsla(181, 91, 45, 1),
-  Mint:     hsla(165, 71, 70, 1),
-  Lime:     hsla(94, 80, 80, 1),
-  Floral:   hsla(242, 83, 79, 1),
-  Thulian:  hsla(307, 63, 72, 1),
-  Rose:     hsla(339, 78, 71, 1),
-  Orange:   hsla(15, 68, 65, 1)
+$colour: (
+  black:    hsla(228, 29, 14, 1),
+  white:    hsla(201, 69, 90, 1),
+  sunset:   hsla(231, 28, 18, 1),
+  primary:  hsla(218, 90, 72, 1),
+  second:   hsla(198, 74, 71, 1),
+  accent:   hsla(35, 86, 80, 1),
+  teal:     hsla(181, 91, 45, 1),
+  mint:     hsla(165, 71, 70, 1),
+  lime:     hsla(94, 80, 80, 1),
+  floral:   hsla(242, 83, 79, 1),
+  thulian:  hsla(307, 63, 72, 1),
+  rose:     hsla(339, 78, 71, 1),
+  orange:   hsla(15, 68, 65, 1)
 );
 
-$MimaoOpacity: (
+$colour-opacity: (
   100: 1,
   80: .8,
   54: .54,
@@ -28,11 +25,16 @@ $MimaoOpacity: (
   10: .1
 );
 
+// Grid System
+$grid-columns: 12; // ~ 24 column grid
+$grid-column-width: 92px;
+$grid-column-width-percentage: 100% / $grid-columns;
+$grid-gutter: 16px !default;
 
-// Maximum layout size
-$Gutter: 16px !default;
-$ColumnWidth: 84px;
-$Contain: $ColumnWidth * 12 + $Gutter * 24;
-@function columns ($number: 1, $Col: 12) {
-  @return $ColumnWidth * ($number + $Gutter);
-}
+$breakpoints: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;

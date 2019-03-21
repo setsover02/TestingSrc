@@ -1,45 +1,80 @@
 // Layout variable
-$Gutter: 16px;
-$ColumnWidth: 92px; // Centered container element
+@mixin grid-base-property {
+  position: relative;
+  width: 100%;
+  padding-left: $grid-gutter/2;
+  padding-right: $grid-gutter/2;
+}
 
 .container {
-  position: relative;
   box-sizing: border-box;
-  width: 100%;
-  max-width: ($Gutter + $ColumnWidth) * 12; // 12column grid system
+  max-width: ($grid-gutter + $grid-column-width) * $grid-columns;
   margin: 0 auto;
-  padding-left: floor($Gutter/2);
-  padding-right: ceil($Gutter/2);
+  @include grid-base-property;
   @include clearfix;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: ceil(-$Gutter/2);
-  margin-right: floor(-$Gutter/2);
+  margin-left: -$grid-gutter/2;
+  margin-right: -$grid-gutter/2;
   @include clearfix;
-  background: colour(Teal);
+  // display: block;
+  background: colour(teal);
+
+  > [class^="col-"],
+   > [class*="col-"] {
+    height: 200px;
+  }
+}
+@for $i from 1 through $grid-columns {
+  .col#{-$i} {
+    max-width: $grid-column-width-percentage * $i;
+    flex: 0 0 $grid-column-width-percentage * $i;
+    float: left;
+    @include grid-base-property;
+    @include clearfix;
+  }
+  @each $infix, $value in $breakpoints {
+    @media screen and (min-width: $value) {
+      .col#{-$infix}#{-$i} {
+        max-width: $grid-column-width-percentage * $i;
+        flex: 0 0 $grid-column-width-percentage * $i;
+        float: left;
+        @include grid-base-property;
+        @include clearfix;
+      }
+
+      .col#{-$infix}-offset#{-$i} {
+        margin-left: $grid-column-width-percentage * $i;
+      }
+
+      .col#{-$infix}-push#{-$i} {
+        left: $grid-column-width-percentage * $i;
+      }
+    }
+  }
 }
 
-.col {
-  position: relative;
-  height: 200px;
-  flex: 1;
-  padding-left: ceil($Gutter/2);
-  padding-right: floor($Gutter/2);
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " + "Please make sure it is defined in `$breakpoints` map.";
+  }
 }
 
-.col-12 {
-  position: relative;
-  height: 200px;
-  flex: 0 0 100%;
-  padding-left: ceil($Gutter/2);
-  padding-right: floor($Gutter/2);
+.ele {
+  @include respond-to(xs) {
+    color: #232323;
+  }
 }
 
 .content {
-  background: colour(Floral);
+  background: colour(floral);
   width: 100%;
   height: 100%;
 }

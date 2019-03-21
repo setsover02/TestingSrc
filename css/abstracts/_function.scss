@@ -1,8 +1,8 @@
 // Get colour map
 @function colour($key) {
-  @if map-has-key($MimaoColour, $key) {
-    @return map-get($MimaoColour, $key);
+  @if map-has-key($colour, $key) {
+    @return map-get($colour, $key);
   }
-  @warn "Unknown `#{$key}` in $MimaoColour.";
+  @warn "Unknown `#{$key}` in $colour.";
   @return null;
 }

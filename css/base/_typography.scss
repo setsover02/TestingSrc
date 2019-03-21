@@ -14,8 +14,8 @@
 }
 
 // font color css // compile .font-black
-@each $get-color, $value in $MimaoColour {
-  .font-#{$get-color} {
+@each $get-colour, $value in $colour {
+  .font-#{$get-colour} {
     color: $value;
   }
 }

@@ -1,0 +1,73 @@
+div.class {}
+// **Descendant
+
+.parent .child {}
+// ** Direct Descendant
+
+.parent > .child {}
+// ** Adjacent
+// .caption element immediately preceded by h2
+
+h2 + .caption {}
+// ** Sibling
+// .class elements following a div
+
+h2 ~ .caption {}
+// ** Attribute Selector
+
+a[href] {}
+
+a[href="https://www.naver.com"] {}
+
+a[href*="naver"] {}
+
+a[href^="http"] {}
+
+a[href$=".com"] {}
+
+a[href$="jpg"],
+a[href$="jpeg"],
+a[href$="gif"] {}
+// changed
+
+a[data-filetype="image"] {}
+// precede
+// <a data-filetype="image"> Image Link </a>
+
+a[data-info~="external"] {
+  color: red;
+}
+
+a[data-info~="image"] {
+  border: 1px solid black;
+}
+// <a data-info="external image"> Click Me, Fool </a>
+// <a data-info="external"> Click Me, Fool </a>
+
+input[type=radio]:checked {}
+input[type=radio]:disabled {}
+input[type=radio]:checked:disabled {}
+
+div:not(#container){}
+
+// change first letter text
+p::first-letter{}
+// change first line text
+p::first-line{}
+
+// ** Child Selector
+li:nth-child(3){}
+li:nth-child(3n){}
+
+li:nth-last-child(3){}
+li:nth-last-child(3n){}
+
+ul:nth-of-type(3){}
+ul:nth-last-of-type(3){}
+
+ul li:first-child{}
+ul li:last-child{}
+
+div p:only-child{}
+div p:only-of-type{}
+div p:first-of-type{}
