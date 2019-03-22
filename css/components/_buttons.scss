@@ -6,8 +6,8 @@ button {
   display: block;
   border: none;
   border-radius: 4px;
-  box-shadow: 0 4px 8px map-get($color, primary-30);
-  color: map-get($theme-color, light);
+  box-shadow: 0 4px 8px map-get($sub-colors, primary-30);
+  color: map-get($theme-colors, darken);
   outline: none;
   width: 100%;
   height: 40px;
@@ -15,20 +15,245 @@ button {
   @include transition (100ms);
 
   &.btn-primary {
+    box-shadow: 0 4px 8px map-get($sub-colors, primary-30);
     @include linear-primary-second;
+
     &:hover {
-      box-shadow: 0 8px 16px map-get($color, primary-30);
+      box-shadow: 0 8px 16px map-get($sub-colors, primary-30);
       @include translate(0, -2px);
     }
+
     &:active {
-      box-shadow: 0 0 4px map-get($color, primary-30);
-      @include translate(0, 0px);
+      opacity: 0.8;
+      box-shadow: 0 0 4px map-get($sub-colors, primary-30);
+      @include translate(0, 0);
+    }
+  }
+
+  &.btn-second {
+    box-shadow: 0 4px 8px map-get($sub-colors, second-30);
+    @include linear-second-accent;
+
+    &:hover {
+      box-shadow: 0 8px 16px map-get($sub-colors, second-30);
+      @include translate(0, -2px);
+    }
+
+    &:active {
+      opacity: 0.8;
+      box-shadow: 0 0 4px map-get($sub-colors, second-30);
+      @include translate(0, 0);
+    }
+  }
+
+  &.btn-accent {
+    box-shadow: 0 4px 8px map-get($sub-colors, accent-30);
+    @include linear-accent-mint;
+
+    &:hover {
+      box-shadow: 0 8px 16px map-get($sub-colors, accent-30);
+      @include translate(0, -2px);
+    }
+
+    &:active {
+      opacity: 0.8;
+      box-shadow: 0 0 4px map-get($sub-colors, accent-30);
+      @include translate(0, 0);
+    }
+  }
+
+  &.btn-mint {
+    box-shadow: 0 4px 8px map-get($sub-colors, mint-30);
+    @include linear-mint-lime;
+
+    &:hover {
+      box-shadow: 0 8px 16px map-get($sub-colors, mint-30);
+      @include translate(0, -2px);
+    }
+
+    &:active {
+      opacity: 0.8;
+      box-shadow: 0 0 4px map-get($sub-colors, mint-30);
+      @include translate(0, 0);
+    }
+  }
+
+  &.btn-lime {
+    box-shadow: 0 4px 8px map-get($sub-colors, lime-30);
+    @include linear-lime-yellow;
+
+    &:hover {
+      box-shadow: 0 8px 16px map-get($sub-colors, lime-30);
+      @include translate(0, -2px);
+    }
+
+    &:active {
+      opacity: 0.8;
+      box-shadow: 0 0 4px map-get($sub-colors, lime-30);
+      @include translate(0, 0);
+    }
+  }
+
+  &.btn-yellow {
+    box-shadow: 0 4px 8px map-get($sub-colors, yellow-30);
+    @include linear-yellow-orange;
+
+    &:hover {
+      box-shadow: 0 8px 16px map-get($sub-colors, yellow-30);
+      @include translate(0, -2px);
+    }
+
+    &:active {
+      opacity: 0.8;
+      box-shadow: 0 0 4px map-get($sub-colors, yellow-30);
+      @include translate(0, 0);
+    }
+  }
+
+  &.btn-orange {
+    box-shadow: 0 4px 8px map-get($sub-colors, orange-30);
+    @include linear-orange-rose;
+
+    &:hover {
+      box-shadow: 0 8px 16px map-get($sub-colors, orange-30);
+      @include translate(0, -2px);
+    }
+
+    &:active {
+      opacity: 0.8;
+      box-shadow: 0 0 4px map-get($sub-colors, orange-30);
+      @include translate(0, 0);
+    }
+  }
+
+  &.btn-rose {
+    box-shadow: 0 4px 8px map-get($sub-colors, rose-30);
+    @include linear-rose-thulian;
+
+    &:hover {
+      box-shadow: 0 8px 16px map-get($sub-colors, rose-30);
+      @include translate(0, -2px);
+    }
+
+    &:active {
+      opacity: 0.8;
+      box-shadow: 0 0 4px map-get($sub-colors, rose-30);
+      @include translate(0, 0);
+    }
+  }
+
+  &.btn-thulian {
+    box-shadow: 0 4px 8px map-get($sub-colors, thulian-30);
+    @include linear-thulian-floral;
+
+    &:hover {
+      box-shadow: 0 8px 16px map-get($sub-colors, thulian-30);
+      @include translate(0, -2px);
+    }
+
+    &:active {
+      opacity: 0.8;
+      box-shadow: 0 0 4px map-get($sub-colors, thulian-30);
+      @include translate(0, 0);
+    }
+  }
+
+  &.btn-outline {
+    border-width: 1px;
+    border-style: solid;
+    background: transparent;
+
+    &.btn-primary {
+      border-color: map-get($colors, primary);
+      color: map-get($colors, primary);
+
+      &:hover {
+        background: map-get($colors, primary);
+        color: map-get($theme-colors, darken);
+      }
+    }
+
+    &.btn-second {
+      border-color: map-get($colors, second);
+      color: map-get($colors, second);
+
+      &:hover {
+        background: map-get($colors, second);
+        color: map-get($theme-colors, darken);
+      }
+    }
+
+    &.btn-accent {
+      border-color: map-get($colors, accent);
+      color: map-get($colors, accent);
+
+      &:hover {
+        background: map-get($colors, accent);
+        color: map-get($theme-colors, darken);
+      }
+    }
+
+    &.btn-mint {
+      border-color: map-get($colors, mint);
+      color: map-get($colors, mint);
+
+      &:hover {
+        background: map-get($colors, mint);
+        color: map-get($theme-colors, darken);
+      }
+    }
+
+    &.btn-lime {
+      border-color: map-get($colors, lime);
+      color: map-get($colors, lime);
+
+      &:hover {
+        background: map-get($colors, lime);
+        color: map-get($theme-colors, darken);
+      }
+    }
+
+    &.btn-yellow {
+      border-color: map-get($colors, yellow);
+      color: map-get($colors, yellow);
+
+      &:hover {
+        background: map-get($colors, yellow);
+        color: map-get($theme-colors, darken);
+      }
+    }
+
+    &.btn-orange {
+      border-color: map-get($colors, orange);
+      color: map-get($colors, orange);
+
+      &:hover {
+        background: map-get($colors, orange);
+        color: map-get($theme-colors, darken);
+      }
+    }
+
+    &.btn-rose {
+      border-color: map-get($colors, rose);
+      color: map-get($colors, rose);
+
+      &:hover {
+        background: map-get($colors, rose);
+        color: map-get($theme-colors, darken);
+      }
+    }
+
+    &.btn-thulian {
+      border-color: map-get($colors, thulian);
+      color: map-get($colors, thulian);
+
+      &:hover {
+        background: map-get($colors, thulian);
+        color: map-get($theme-colors, darken);
+      }
     }
   }
 }
-
-@each $get-color, $value in $color {
-  .btn-#{$get-color} {
-
-  }
+@each $get-color, $value in $sub-colors {
+  .btn-#{$get-color} {}
 }

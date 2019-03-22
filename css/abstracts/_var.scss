@@ -1,7 +1,7 @@
 // Variables
 //
 // color Maps
-$theme-color:(
+$theme-colors:(
   darken:  hsla(235, 39, 20, 1),
   dark:    hsla(235, 37, 22, 1),
   normal:  hsla(236, 36, 24, 1),
@@ -9,74 +9,65 @@ $theme-color:(
   lighten: hsla(234, 31, 33, 1)
 );
 
-$white:    hsla(201, 69, 90, 1);
-$primary:  hsla(218, 90, 72, 1);
-$second:   hsla(198, 74, 71, 1);
-$accent:   hsla(181, 91, 45, 1);
-$mint:     hsla(165, 71, 70, 1);
-$lime:     hsla(94, 80, 80, 1);
-$floral:   hsla(274, 92, 62, 1);
-$thulian:  hsla(307, 70, 53, 1);
-$rose:     hsla(339, 78, 71, 1);
-$orange:   hsla(15, 68, 65, 1);
-$yellow:   hsla(35, 86, 80, 1);
+$colors:(
+  white:    hsla(201, 69, 90, 1),
+  primary:  hsla(218, 90, 72, 1),
+  second:   hsla(198, 74, 71, 1),
+  accent:   hsla(181, 91, 45, 1),
+  mint:     hsla(165, 71, 70, 1),
+  lime:     hsla(94, 80, 80, 1),
+  yellow:   hsla(35, 86, 80, 1),
+  orange:   hsla(15, 68, 65, 1),
+  rose:     hsla(339, 78, 71, 1),
+  thulian:  hsla(307, 70, 53, 1),
+  floral:   hsla(274, 92, 62, 1)
+);
 
-$color: (
-  white:      $white,
-  white-80:   transparentize($white, .2),
-  white-54:   transparentize($white, .46),
-  white-30:   transparentize($white, .7),
-  white-10:   transparentize($white, .9),
-  primary:    $primary,
-  primary-80: transparentize($primary, .2),
-  primary-54: transparentize($primary, .46),
-  primary-30: transparentize($primary, .7),
-  primary-10: transparentize($primary, .9),
-  second:     $second,
-  second-80:  transparentize($second, .2),
-  second-54:  transparentize($second, .46),
-  second-30:  transparentize($second, .7),
-  second-10:  transparentize($second, .9),
-  accent:     $accent,
-  accent-80:  transparentize($accent, .2),
-  accent-54:  transparentize($accent, .46),
-  accent-30:  transparentize($accent, .7),
-  accent-10:  transparentize($accent, .9),
-  mint:       $mint,
-  mint-80:    transparentize($mint, .2),
-  mint-54:    transparentize($mint, .46),
-  mint-30:    transparentize($mint, .7),
-  mint-10:    transparentize($mint, .9),
-  lime:       $lime,
-  lime-80:    transparentize($lime, .2),
-  lime-54:    transparentize($lime, .46),
-  lime-30:    transparentize($lime, .7),
-  lime-10:    transparentize($lime, .9),
-  floral:     $floral,
-  floral-80:  transparentize($floral, .2),
-  floral-54:  transparentize($floral, .46),
-  floral-30:  transparentize($floral, .7),
-  floral-10:  transparentize($floral, .9),
-  thulian:    $thulian,
-  thulian-80: transparentize($thulian, .2),
-  thulian-54: transparentize($thulian, .46),
-  thulian-30: transparentize($thulian, .7),
-  thulian-10: transparentize($thulian, .9),
-  rose:       $rose,
-  rose-80:    transparentize($rose, .2),
-  rose-54:    transparentize($rose, .46),
-  rose-30:    transparentize($rose, .7),
-  rose-10:    transparentize($rose, .9),
-  orange:     $orange,
-  orange-80:  transparentize($orange, .2),
-  orange-54:  transparentize($orange, .46),
-  orange-30:  transparentize($orange, .7),
-  orange-10:  transparentize($orange, .9),
-  yellow:     $yellow,
-  yellow-80:  transparentize($yellow, .2),
-  yellow-54:  transparentize($yellow, .46),
-  yellow-30:  transparentize($yellow, .7),
-  yellow-10:  transparentize($yellow, .9),
+$sub-colors: (
+  white-80:   transparentize(map-get($colors, white), .2),
+  white-54:   transparentize(map-get($colors, white), .46),
+  white-30:   transparentize(map-get($colors, white), .7),
+  white-10:   transparentize(map-get($colors, white), .9),
+  primary-80: transparentize(map-get($colors, primary), .2),
+  primary-54: transparentize(map-get($colors, primary), .46),
+  primary-30: transparentize(map-get($colors, primary), .7),
+  primary-10: transparentize(map-get($colors, primary), .9),
+  second-80:  transparentize(map-get($colors, second), .2),
+  second-54:  transparentize(map-get($colors, second), .46),
+  second-30:  transparentize(map-get($colors, second), .7),
+  second-10:  transparentize(map-get($colors, second), .9),
+  accent-80:  transparentize(map-get($colors, accent), .2),
+  accent-54:  transparentize(map-get($colors, accent), .46),
+  accent-30:  transparentize(map-get($colors, accent), .7),
+  accent-10:  transparentize(map-get($colors, accent), .9),
+  mint-80:    transparentize(map-get($colors, mint), .2),
+  mint-54:    transparentize(map-get($colors, mint), .46),
+  mint-30:    transparentize(map-get($colors, mint), .7),
+  mint-10:    transparentize(map-get($colors, mint), .9),
+  lime-80:    transparentize(map-get($colors, lime), .2),
+  lime-54:    transparentize(map-get($colors, lime), .46),
+  lime-30:    transparentize(map-get($colors, lime), .7),
+  lime-10:    transparentize(map-get($colors, lime), .9),
+  yellow-80:  transparentize(map-get($colors, yellow), .2),
+  yellow-54:  transparentize(map-get($colors, yellow), .46),
+  yellow-30:  transparentize(map-get($colors, yellow), .7),
+  yellow-10:  transparentize(map-get($colors, yellow), .9),
+  orange-80:  transparentize(map-get($colors, orange), .2),
+  orange-54:  transparentize(map-get($colors, orange), .46),
+  orange-30:  transparentize(map-get($colors, orange), .7),
+  orange-10:  transparentize(map-get($colors, orange), .9),
+  rose-80:    transparentize(map-get($colors, rose), .2),
+  rose-54:    transparentize(map-get($colors, rose), .46),
+  rose-30:    transparentize(map-get($colors, rose), .7),
+  rose-10:    transparentize(map-get($colors, rose), .9),
+  thulian-80: transparentize(map-get($colors, thulian), .2),
+  thulian-54: transparentize(map-get($colors, thulian), .46),
+  thulian-30: transparentize(map-get($colors, thulian), .7),
+  thulian-10: transparentize(map-get($colors, thulian), .9),
+  floral-80:  transparentize(map-get($colors, floral), .2),
+  floral-54:  transparentize(map-get($colors, floral), .46),
+  floral-30:  transparentize(map-get($colors, floral), .7),
+  floral-10:  transparentize(map-get($colors, floral), .9)
 );
 
 // Font Weight
