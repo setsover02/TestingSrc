@@ -254,6 +254,27 @@ button {
     }
   }
 }
-@each $get-color, $value in $sub-colors {
-  .btn-#{$get-color} {}
+
+@each $get-color, $value in $colors {
+  .btn-#{$get-color} {
+    color: $value;
+  }
 }
+
+// @each $get-color, $value in $colors {
+//   .btn-#{$get-color} {
+//     box-shadow: 0 4px 8px map-get($sub-colors, #{$get-color}-30);
+//     @include linear-#{nth($get-color,1)}#{nth($get-color, 2)};
+//
+//     &:hover {
+//       box-shadow: 0 8px 16px map-get($sub-colors, #{$get-color}-30);
+//       @include translate(0, -2px);
+//     }
+//
+//     &:active {
+//       opacity: 0.8;
+//       box-shadow: 0 0 4px map-get($sub-colors, #{$get-color}-30);
+//       @include translate(0, 0);
+//     }
+//   }
+// }
