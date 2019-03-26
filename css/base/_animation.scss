@@ -1,0 +1,67 @@
+/* MAD-RIPPLE EFFECT */
+
+.ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  /* to contain zoomed ripple */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  /* inherit from parent (rounded buttons etc) */
+  pointer-events: none;
+  /* allow user interaction */
+  @include animation (ripple-shadow 0.4s forwards);
+}
+
+.rippleWave {
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 50%;
+  background: map-get($theme-colors, normal);
+  opacity: 0.2;
+  @include scale(0.7);
+  @include animation (ripple 2s forwards);
+}
+
+@keyframes ripple-shadow {
+  0% {
+    box-shadow: 0 0 0 rgba(0,0,0,0.0);
+  }
+
+  20% {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(0,0,0,0.0);
+  }
+}
+@-webkit-keyframes ripple-shadow {
+  0% {
+    box-shadow: 0 0 0 rgba(0,0,0,0.0);
+  }
+
+  20% {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(0,0,0,0.0);
+  }
+}
+@keyframes ripple {
+  to {
+    @include scale(24);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes ripple {
+  to {
+    -webkit-transform: scale(24);
+    opacity: 0;
+  }
+}

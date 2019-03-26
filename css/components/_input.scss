@@ -1,0 +1,32 @@
+
+// Input
+.input, input {
+  box-sizing: border-box;
+  border: 1px solid map-get($theme-colors, light);
+  border-radius: $basic-radius;
+  background: map-get($theme-colors, dark);
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  color: map-get($colors, white);
+
+  font-size: 0.875rem;
+  font-weight: $font-weight-regular;
+  line-height: 1;
+
+  outline: none;
+  @include transition (200ms);
+
+  &:-ms-input-placeholder,
+  &::-webkit-input-placeholder,
+  &::placeholder {
+    color: map-get($sub-colors, white-54);
+  }
+  
+  &:hover {
+    border-color: map-get($sub-colors, primary-54);
+  }
+  &:focus {
+    border-color: map-get($colors, primary);
+  }
+}

@@ -1,0 +1,17 @@
+// base portlet
+
+.ptl {
+  border-radius: $basic-radius;
+  margin: 16px 0;
+  @include linear-light-normal;
+  @include shadow-dp-2;
+  overflow: hidden;
+  // portlet content
+  .ptl-blk {
+    padding: 16px;
+    // portlet content full w - h
+    &.ptl-max {
+      padding: 0;
+    }
+  }
+}

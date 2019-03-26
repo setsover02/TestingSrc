@@ -1,5 +1,5 @@
 body {
-  @include radial-dark-darken;
+  @include linear-normal-dark;
   display: flex;
   flex-direction: column;
   min-height: 100vh;

@@ -5,6 +5,8 @@
   <title>Prototype</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
   <script>
@@ -21,81 +23,215 @@
 
 <body>
   <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3>Buttons</h3>
+      </div>
+    </div>
+    <!-- Begin: Button Contained -->
     <div class="row margin-top--32">
       <div class="col-12">
-        <p class="body1">
+        <h4 class="subtitle">
           Button Contained
-        </p>
+        </h4>
         <span class="caption text-white-54">.btn</span>
       </div>
       <div class="col-1">
-        <button class="btn btn-primary">primary</button>
+        <button data-ripple class="btn btn-primary">primary</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-second">second</button>
+        <button data-ripple class="btn btn-second">second</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-accent">accent</button>
+        <button data-ripple class="btn btn-accent">accent</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-mint">mint</button>
+        <button data-ripple class="btn btn-mint">mint</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-lime">lime</button>
+        <button data-ripple class="btn btn-lime">lime</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-yellow">yellow</button>
+        <button data-ripple class="btn btn-yellow">yellow</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-orange">orange</button>
+        <button data-ripple class="btn btn-orange">orange</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-rose">rose</button>
+        <button data-ripple class="btn btn-rose">rose</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-thulian">thulian</button>
+        <button data-ripple class="btn btn-thulian">thulian</button>
+      </div>
+      <div class="col-1">
+        <button data-ripple class="btn btn-primary" disabled>disabled</button>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h4 class="subtitle">
+          Button Contained - small
+        </h4>
+        <span class="caption text-white-54">.btn-sm</span>
+      </div>
+      <div class="col-12">
+        <button data-ripple class="btn btn-sm btn-primary">primary</button>
+        <button data-ripple class="btn btn-sm btn-second">second</button>
+        <button data-ripple class="btn btn-sm btn-accent">accent</button>
+        <button data-ripple class="btn btn-sm btn-mint">mint</button>
+        <button data-ripple class="btn btn-sm btn-lime">lime</button>
+        <button data-ripple class="btn btn-sm btn-yellow">yellow</button>
+        <button data-ripple class="btn btn-sm btn-orange">orange</button>
+        <button data-ripple class="btn btn-sm btn-rose">rose</button>
+        <button data-ripple class="btn btn-sm btn-thulian">thulian</button>
       </div>
     </div>
+    <!-- End: Button Contained -->
+    <!-- Begin: Button Outlined -->
     <div class="row margin-top--32">
       <div class="col-12">
-        <p class="body1">
+        <h4 class="subtitle">
           Button Outlined
-        </p>
+        </h4>
         <span class="caption text-white-54">.btn.btn-outline</span>
       </div>
       <div class="col-1">
-        <button class="btn btn-primary btn-outline">primary</button>
+        <button data-ripple class="btn btn-primary btn-outline">primary</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-second btn-outline">second</button>
+        <button data-ripple class="btn btn-second btn-outline">second</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-accent btn-outline">accent</button>
+        <button data-ripple class="btn btn-accent btn-outline">accent</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-mint btn-outline">mint</button>
+        <button data-ripple class="btn btn-mint btn-outline">mint</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-lime btn-outline">lime</button>
+        <button data-ripple class="btn btn-lime btn-outline">lime</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-yellow btn-outline">yellow</button>
+        <button data-ripple class="btn btn-yellow btn-outline">yellow</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-orange btn-outline">orange</button>
+        <button data-ripple class="btn btn-orange btn-outline">orange</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-rose btn-outline">rose</button>
+        <button data-ripple class="btn btn-rose btn-outline">rose</button>
       </div>
       <div class="col-1">
-        <button class="btn btn-thulian btn-outline">thulian</button>
+        <button data-ripple class="btn btn-thulian btn-outline">thulian</button>
+      </div>
+      <div class="col-1">
+        <button data-ripple class="btn btn-primary btn-outline" disabled>disabled</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h4 class="subtitle">
+          Button Outlined - small
+        </h4>
+        <span class="caption text-white-54">.btn-outline.btn-sm</span>
+      </div>
+      <div class="col-12">
+        <button data-ripple class="btn btn-outline btn-sm btn-primary">primary</button>
+        <button data-ripple class="btn btn-outline btn-sm btn-second">second</button>
+        <button data-ripple class="btn btn-outline btn-sm btn-accent">accent</button>
+        <button data-ripple class="btn btn-outline btn-sm btn-mint">mint</button>
+        <button data-ripple class="btn btn-outline btn-sm btn-lime">lime</button>
+        <button data-ripple class="btn btn-outline btn-sm btn-yellow">yellow</button>
+        <button data-ripple class="btn btn-outline btn-sm btn-orange">orange</button>
+        <button data-ripple class="btn btn-outline btn-sm btn-rose">rose</button>
+        <button data-ripple class="btn btn-outline btn-sm btn-thulian">thulian</button>
+      </div>
+    </div>
+    <!-- End: Button Outlined -->
+    <!-- Begin: Button Text -->
+    <div class="row margin-top--32">
+      <div class="col-12">
+        <h4 class="subtitle">Button Text - inline</h4>
+        <span class="caption text-white-54">.btn.btn-text</span>
+      </div>
+      <div class="col-1">
+        <button data-ripple class="btn btn-text btn-primary">primary</button>
+      </div>
+      <div class="col-1">
+        <button data-ripple class="btn btn-text btn-second">second</button>
+      </div>
+      <div class="col-1">
+        <button data-ripple class="btn btn-text btn-accent">accent</button>
+      </div>
+      <div class="col-1">
+        <button data-ripple class="btn btn-text btn-mint">mint</button>
+      </div>
+      <div class="col-1">
+        <button data-ripple class="btn btn-text btn-lime">lime</button>
+      </div>
+      <div class="col-1">
+        <button data-ripple class="btn btn-text btn-yellow">yellow</button>
+      </div>
+      <div class="col-1">
+        <button data-ripple class="btn btn-text btn-orange">orange</button>
+      </div>
+      <div class="col-1">
+        <button data-ripple class="btn btn-text btn-rose">rose</button>
+      </div>
+      <div class="col-1">
+        <button data-ripple class="btn btn-text btn-thulian">thulian</button>
+      </div>
+      <div class="col-1">
+        <button data-ripple class="btn btn-text btn-primary" disabled>disabled</button>
+      </div>
+    </div>
+    <!-- End: Button Text -->
+    <!-- Begin: Button + Prepend -->
+    <div class="row margin-top--32">
+      <div class="col-12">
+        <h4 class="subtitle">
+          Button + Prepend
+        </h4>
+      </div>
+      <div class="col-2">
+        <button data-ripple class="btn btn-primary">
+          <i class="fa fa-plus"></i>
+          primary
+        </button>
+      </div>
+      <div class="col-2">
+        <button data-ripple class="btn btn-outline btn-primary">
+          <i class="fa fa-plus"></i>
+          primary
+        </button>
+      </div>
+      <div class="col-2">
+        <button data-ripple class="btn btn-text btn-primary">
+          <i class="fa fa-plus"></i>
+          primary
+        </button>
+      </div>
+    </div>
+    <!-- End: Button + Prepend -->
+    <div class="row">
+      <div class="col-4">
+        <div class="ptl">
+          <div class="ptl-blk">
+            <h4 class="subtitle">
+              input
+            </h4>
+            <span class="caption text-white-54">.input</span>
+          </div>
+          <div class="ptl-blk">
+            <input placeholder="label"/>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="js/animation.js"></script>
 </body>
-
-<!-- Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
 </html>
