@@ -35,11 +35,12 @@
 
       &:hover {
         box-shadow: 0 8px 16px map-get($sub-colors, #{$get-color}-30);
+        @include translate(0, -2px);
       }
 
       &:active {
-        opacity: 0.8;
-        box-shadow: 0 0 4px map-get($sub-colors, #{$get-color}-30);
+        // opacity: 1;
+        // box-shadow: 0 0 4px map-get($sub-colors, #{$get-color}-30);
         @include translate(0, 0);
       }
     }
